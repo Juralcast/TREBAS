@@ -1,0 +1,29 @@
+package org.example;
+
+import java.util.Scanner;
+public class Assignment {
+    public void calculator(float men, float women, float litters, float deposits) {
+        float total = men + women;
+        float litterMen, litterWomen;
+        litterMen = (men/total) * ((litters/total)*100);
+        litterWomen = (women/total) * ((litters/total)*100);
+        System.out.println("The total number of littering men is: " + litterMen);
+        System.out.println("The total number of littering women is: " + litterWomen);
+    }
+    public static void main(String[] args) {
+        float totalMen, totalWomen, totalDepo, totalLit;
+
+        Scanner scan = new Scanner(System.in);
+        Assignment dof = new Assignment();
+        System.out.println("Enter the total of males: ");
+        totalMen = scan.nextInt();
+        System.out.println("Enter the total of females: ");
+        totalWomen = scan.nextInt();
+        System.out.println("Enter the total who deposits: ");
+        totalDepo = scan.nextInt();
+        System.out.println("Enter the total who litters: ");
+        totalLit = scan.nextInt();
+
+        dof.calculator(totalMen, totalWomen, totalLit, totalDepo);
+    }
+}
