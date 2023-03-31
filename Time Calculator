@@ -1,0 +1,23 @@
+package org.example;
+
+import java.util.Scanner;
+
+
+public class TimeCalc {
+    public void timing(int a,int b) {
+        int time = a/b;
+        System.out.println("The time taken for going from A to B is "+time+" seconds");
+    }
+
+    public static void main(String args[]) {
+        int a,b;
+        TimeCalc myobj = new TimeCalc();
+        Scanner Jur = new Scanner(System.in);
+        System.out.println("Enter the distance between A and B in meters: ");
+        a = Jur.nextInt();
+        System.out.println("Enter the speed in m/s: ");
+        b = Jur.nextInt();
+        myobj.timing(a,b);
+
+    }
+}
