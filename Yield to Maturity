@@ -1,0 +1,37 @@
+package org.example;
+
+import java.util.Scanner;
+
+    // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
+    public class YieldToMaturity{
+        public static void main(String[] args) {
+
+            //3.Write a Java program to calculate YIELD TO MATURITY
+            int C;
+            int F;
+            int P;
+            int n;
+
+
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Insert the value of C: ");
+            C = Integer.parseInt(sc.nextLine());
+            System.out.print("Insert the value of F: ");
+            F = Integer.parseInt(sc.nextLine());
+            System.out.print("Insert the value of P: ");
+            P = Integer.parseInt(sc.nextLine());
+            System.out.print("Insert the value of n: ");
+            n = Integer.parseInt(sc.nextLine());
+
+
+            double value1 = C + (((double) (F - P) / n));
+            double value2 = (double) (F + P) / 2;
+
+            double result = (double) value1 / value2;
+            System.out.printf("result = %.2f", result);
+
+        }
+
+
+    }
