@@ -1,0 +1,88 @@
+package org.example;
+
+public class Encapsulation {
+
+    private int empno;
+    private String name;
+    private double salary;
+
+    private String jobdescription;
+
+    private double hourlywage;
+
+    public int getEmpno() {
+        return empno;
+    }
+
+    public void setEmpno(int empno) {
+        this.empno = empno;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public double getSalary(){
+        return salary;
+    }
+
+    public String getjobdescription(){
+        return jobdescription;
+    }
+
+    public double gethourlywage(){
+        return hourlywage;
+    }
+
+}
+
+class EmployeeManager {
+    public static void main(String args[]) {
+        Encapsulation employee = new Encapsulation();
+        employee.setEmpno(12);
+        employee.setName("Jur");
+        employee.setSalary(80000.00);
+
+        System.out.println("Employee number:"+employee.getEmpno());
+        System.out.println("Employee name:"+employee.getName());
+        System.out.println("Employee salary: $"+employee.getSalary());
+
+    }
+
+public class SalaryIncrease {
+    public static void main(String[] args) {
+        Encapsulation employee = new Encapsulation();
+        employee.setEmpno(12);
+        employee.setName("Jur");
+        employee.setSalary(80000.00);
+
+        double currentSalary = employee.getSalary();
+        double salaryIncrease = 0.05 * currentSalary;
+        double newSalary = currentSalary + salaryIncrease;
+
+        employee.setSalary(newSalary);
+
+        System.out.println("Employee number: " + employee.getEmpno());
+        System.out.println("Employee name: " + employee.getName());
+        System.out.println("Employee new salary: $" + employee.getSalary());
+    }
+
+    public class jobInfo {
+        public static void main(String[] args) {
+            Encapsulation employee = new Encapsulation();
+            employee.getjobdescription();
+            employee.setName("Jur");
+            employee.setSalary(80000.00);
+            employee.gethourlywage();
+        }
+    }
+}
+}
