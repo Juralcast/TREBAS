@@ -1,0 +1,26 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class TotalStockReturn {
+    public static void main(String[] args) {
+
+        //3.Write a Java program to calculate YIELD TO MATURITY
+        float P1;
+        float P0;
+        float D;
+        float result;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Insert the value of P1: ");
+        P1 = Integer.parseInt(sc.nextLine());
+        System.out.print("Insert the value of P0: ");
+        P0 = Integer.parseInt(sc.nextLine());
+        System.out.print("Insert the value of D: ");
+        D = Integer.parseInt(sc.nextLine());
+
+        result= ((P1-P0)+D)/P0;
+        System.out.printf("The Total Stock Return is:%.2f ", result);
+
+    }
+}
