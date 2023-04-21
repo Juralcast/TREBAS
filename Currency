@@ -1,0 +1,32 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class Currency {
+    public static void main(String[] args) {
+        int option;
+        float INR;
+        float GBP;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Type your choice: 1. INR TO CAD // 2. GBP TO USD");
+
+        option = sc.nextInt();
+        switch(option) {
+            case 1:
+                System.out.println("Insert the quantity in INR:");
+                INR=sc.nextFloat();
+                double conversion1= INR*0.016;
+                System.out.println("It's "+conversion1+" CAD");
+                break;
+            case 2:
+                System.out.println("Insert the quantity in GBP:");
+                GBP=sc.nextFloat();
+                double conversion2= GBP*1.24;
+                System.out.println("It's "+conversion2+" USD");
+                break;3
+            default:
+                break;
+        }
+
+    }
+}
