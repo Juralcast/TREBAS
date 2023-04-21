@@ -1,0 +1,35 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class BMI {
+
+        public static void main(String[] args) {
+
+            //3.Write a Java program to calculate BMI
+            float height;
+            float weight;
+            String Name;
+            int ID;
+
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter your name: ");
+            Name=sc.nextLine();
+            System.out.print("Enter your ID: ");
+            ID=sc.nextInt();
+            System.out.print("Insert the height in m: ");
+            height = sc.nextFloat();
+            System.out.print("Insert the weight in kg: ");
+            weight = sc.nextFloat();
+            float result= weight/(height*height);
+            System.out.println("Hi"+Name+ID);
+            System.out.printf("Your BMI is:%.2f ", result);
+            if (result<18){
+                System.out.println("You are underweight.");
+            } else if (result>19 && result<25) {
+                System.out.println("You are healthy!");
+            } else {
+                System.out.println("\nYou are obese.");
+            }
+        }
+    }
